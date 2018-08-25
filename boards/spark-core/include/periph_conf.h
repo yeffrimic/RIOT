@@ -22,7 +22,7 @@
 #include "periph_cpu.h"
 
 #ifdef __cplusplus
-extern "C" {
+ extern "C" {
 #endif
 
 /**
@@ -63,7 +63,18 @@ extern "C" {
  * @name ADC configuration
  * @{
  */
-#define ADC_NUMOF           (0)
+
+#define ADC_CONFIG    {\
+ { GPIO_PIN(PORT_A,0), 0, 0  },\
+ { GPIO_PIN(PORT_A,1), 0, 1  },\
+ { GPIO_PIN(PORT_A,4), 0, 4  },\
+ { GPIO_PIN(PORT_A,5), 0, 5  },\
+ { GPIO_PIN(PORT_A,6), 0, 6  },\
+ { GPIO_PIN(PORT_A,7), 0, 7  },\
+ { GPIO_PIN(PORT_B,0), 0, 8  },\
+ { GPIO_PIN(PORT_B,1), 0, 9  }} 
+#define ADC_NUMOF           (8)
+
 /** @} */
 
 /**
